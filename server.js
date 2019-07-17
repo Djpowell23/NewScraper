@@ -62,11 +62,21 @@ app.get("/scrape", function (req, res) {
                     console.log(err);
                 });
         });
-        console.log("scraped new articles");
+        res.send("Scrape complete");
     });
 });
 
 // Route for getting all articles from the db
+app.get("/articles", function (req, res) {
+    // Grab every document in the Articles Collection
+    db.Article.find({})
+        .then(function (article) {
+            res.json(article);
+        })
+        .catch(function (err) {
+            res.json(err);
+        });
+})
 
 // Route for grabbing a specific Article by Id, populate it with it's note.
 
