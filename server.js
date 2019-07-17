@@ -76,9 +76,19 @@ app.get("/articles", function (req, res) {
         .catch(function (err) {
             res.json(err);
         });
-})
+});
 
 // Route for grabbing a specific Article by Id, populate it with it's note.
+app.get("/articles/:id", function (req, res) {
+    db.Article.findOne({ _id: req.params.id })
+        .populate("note")
+        .then(function (article) {
+            res.json(article);
+        })
+        .catch(function (err) {
+            res.json(err);
+        });
+});
 
 // Route for saving/updating an Article's associated note
 
