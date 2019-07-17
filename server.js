@@ -51,7 +51,7 @@ app.get("/scrape", function (req, res) {
                 result.link = $(this).children("h2").children("a").attr("href");
             } else {
                 validResults.title = $(this).children("h2").text();
-                validResults.link = $(this).children("h2").children("a").attr("href");
+                validResults.link = "https://www.nytimes.com/section/us" + $(this).children("h2").children("a").attr("href");
                 console.log(validResults);
             }
 
@@ -105,6 +105,9 @@ app.post("/articles/:id", function (req, res) {
             res.json(err);
         });
 });
+
+// Route for clearing all of the articles
+
 
 // Start the Server
 app.listen(PORT, function () {
