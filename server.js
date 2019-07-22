@@ -49,10 +49,12 @@ app.get("/scrape", function (req, res) {
             if ($(this).children("h2").children("a").attr("href") === undefined) {
                 result.title = $(this).children("h2").text();
                 result.link = $(this).children("h2").children("a").attr("href");
+                // result.summary = $(this).children("p.ccss-1gh531.e4e4i5l4").text(); // This is not working
             } else {
                 validResults.title = $(this).children("h2").text();
-                validResults.link = "https://www.nytimes.com/section/us" + $(this).children("h2").children("a").attr("href");
-                console.log(validResults);
+                validResults.link = "https://www.nytimes.com/" + $(this).children("h2").children("a").attr("href");
+                // validResults.summary = $(this).children("p.ccss-1gh531.e4e4i5l4").text(); // This is not working
+                console.log("valid results:", validResults);
             }
 
             db.Article.create(validResults)

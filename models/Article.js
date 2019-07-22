@@ -17,6 +17,10 @@ var ArticleSchema = new Schema({
         // Unique to stop from flooding DB with same results
         unique: true
     },
+    // summary: {
+    //     type: String,
+    //     required: true
+    // },
     note: {
         type: Schema.Types.ObjectId,
         ref: "Note"
