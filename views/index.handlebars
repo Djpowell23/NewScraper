@@ -3,16 +3,17 @@
 <div id="articles">
     <div class="row">
         <div class="col-10 offset-1 articleTitle">
-            <p>
-                <a href="{{this.link}}">{{this.title}}</a>
-                <button class="btn-large blue waves-effect right" id="deleteArticle">Delete</button>
-                <button class="btn-large blue waves-effect right" id="saveArticle">Save</button>
+            <p id="{{this._id}}">
+                <a data="{{this._id}}" href="{{this.link}}">
+                    <h5 class="titleFont">{{this.title}}</h5>
+                </a>
+                <button class="btn-large blue waves-effect right" id="deleteArticle" data="{{this._id}}">Delete</button>
+                <button class="btn-large blue waves-effect right" id="saveArticle" data="{{this._id}}">Save</button>
             </p>
         </div>
         <div class="col-10 offset-1 articleBody">
-            {{this.summary}}
+            <p data="{{this._id}}">{{this.summary}}</p>
         </div>
     </div>
-</div>
 </div>
 {{/each}}
