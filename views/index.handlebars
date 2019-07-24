@@ -9,13 +9,16 @@
                 </a>
                 <form method="GET" action="/scrape">
                     <button class="btn-large blue waves-effect right" id="saveArticle" data="{{this._id}}">Save</button>
-                    <button class="btn-large blue waves-effect right" id="addNote"
+                    <button class="btn-large blue waves-effect right" id="addNote" data="{{this._id}}"
                         style="margin-right:10px;">Note</button>
                 </form>
             </p>
         </div>
         <div class="col-10 offset-1 articleBody">
             <p data="{{this._id}}">{{this.summary}}</p>
+        </div>
+        <div class="col-10 offset-1 notes">
+            <div id="notes"></div>
         </div>
     </div>
     {{/each}}
