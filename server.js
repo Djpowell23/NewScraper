@@ -109,9 +109,6 @@ app.post("/articles/:id", function (req, res) {
         });
 });
 
-// Route for clearing all of the articles
-
-
 // Start the Server
 app.listen(PORT, function () {
     console.log("App running on port " + PORT + "!");

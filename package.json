@@ -1,6 +1,9 @@
 {
   "name": "NewScraper",
   "version": "1.0.0",
+  "engines": {
+    "yarn": "1.17.13"
+  },
   "main": "index.js",
   "repository": "https://github.com/Djpowell23/NewScraper.git",
   "author": "Devin Powell <dpowel11@kent.edu>",
