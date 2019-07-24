@@ -5,7 +5,9 @@ module.exports = function (app) {
     app.get("/", function (req, res) {
         db.Article.find({})
             .then(function (data) {
-                res.render("index", { article: data })
+                res.render("index", {
+                    article: data
+                });
             });
     });
 }

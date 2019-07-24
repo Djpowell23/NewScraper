@@ -1,6 +1,6 @@
 {{>header}}
-{{#each article}}
 <div id="articles">
+    {{#each article}}
     <div class="row">
         <div class="col-10 offset-1 articleTitle">
             <p id="{{this._id}}">
@@ -9,6 +9,8 @@
                 </a>
                 <form method="GET" action="/scrape">
                     <button class="btn-large blue waves-effect right" id="saveArticle" data="{{this._id}}">Save</button>
+                    <button class="btn-large blue waves-effect right" id="addNote"
+                        style="margin-right:10px;">Note</button>
                 </form>
             </p>
         </div>
@@ -16,5 +18,5 @@
             <p data="{{this._id}}">{{this.summary}}</p>
         </div>
     </div>
+    {{/each}}
 </div>
-{{/each}}
