@@ -1,3 +1,5 @@
+
+
 $(document).on("click", "#saveArticle", function () {
     event.preventDefault();
     var thisArticle = $(this)
@@ -39,6 +41,8 @@ $(document).on("click", "#addNote", function () {
                 $("#titleinput").val(data.note.title);
                 $("#bodyinput").val(data.note.body);
             }
+
+
         })
 });
 
@@ -58,8 +62,8 @@ $(document).on("click", "#saveNote", function () {
     })
         .then(function (data) {
             console.log("last data:", data);
-            $("#notes").empty();
         });
+    $("#notes").empty();
 
     // Remove values entered
     $("#titleinput").val("");
