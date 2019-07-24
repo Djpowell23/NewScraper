@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "Scrape news articles for personal perusal.",
   "main": "server.js",
-  "dependencies": {},
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.6"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
