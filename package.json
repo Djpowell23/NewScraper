@@ -1,15 +1,23 @@
 {
   "name": "NewScraper",
   "version": "1.0.0",
-  "engines": {
-    "yarn": "1.17.3"
+  "description": "Scrape news articles for personal perusal.",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "main": "index.js",
-  "repository": "https://github.com/Djpowell23/NewScraper.git",
-  "author": "Devin Powell <dpowel11@kent.edu>",
-  "license": "MIT",
-  "dependencies": {
-    "npm": "^6.10.2",
-    "yarn": "^1.17.3"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Djpowell23/NewScraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Djpowell23/NewScraper/issues"
+  },
+  "homepage": "https://github.com/Djpowell23/NewScraper#readme"
 }
