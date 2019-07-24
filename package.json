@@ -4,7 +4,7 @@
   "description": "Scrape news articles for personal perusal.",
   "main": "index.js",
   "scripts": {
-    "start": "yarn start"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
