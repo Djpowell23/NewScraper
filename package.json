@@ -2,7 +2,7 @@
   "name": "NewScraper",
   "version": "1.0.0",
   "engines": {
-    "yarn": "1.17.13"
+    "yarn": "1.17.3"
   },
   "main": "index.js",
   "repository": "https://github.com/Djpowell23/NewScraper.git",
