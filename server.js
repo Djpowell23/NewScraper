@@ -49,24 +49,14 @@ app.get("/scrape", function (req, res) {
             console.log("Link:", result.link);
             result.title = $(this).children("article").children("div.content").children("header").children("h3").text();
             console.log("Title:", result.title);
-            result.summary = $(this).children("article").children("div.content").children("p.synopsis").text();
+            var summary = $(this).children("article").children("div.content").children("p.synopsis").text();
+            result.summary = summary.substr(summary.indexOf('\n') + 1);
+
             console.log("Summary:", result.summary);
 
             validResults.title = result.title;
             validResults.link = result.link;
             validResults.summary = result.summary;
-
-            // // Some filtering, getting rid of null results
-            // if ($(this).children("h2").children("a").attr("href") === undefined) {
-            //     result.title = $(this).
-            //     result.link = $(this).children("h2").children("a").attr("href");
-            //     // result.summary = $(this).children("p.ccss-1gh531.e4e4i5l4").text(); // This is not working
-            // } else {
-            //     validResults.title = $(this).children("h2").text();
-            //     validResults.link = "http://www.gamesradar.com/" + $(this).children("h2").children("a").attr("href");
-            //     // validResults.summary = $(this).children("p.ccss-1gh531.e4e4i5l4").text(); // This is not working
-            //     console.log("valid results:", validResults);
-            // }
 
             db.Article.create(validResults)
                 .then(function (article) {
